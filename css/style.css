@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.top-main {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction:column;
+    padding: 0 30vh 0 30vh;
+}
+img.logo {
+    height: 15vh;
+    flex:0 0 0;
+}
+.title {
+    margin: 0 0 3vh 0;
+    color: gray;
+    font-weight: 400;
+    font-size: 5vh;
+}
+.info {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2vh;
+}
+.title, img.logo{
+    align-self: center;
+}
+hr {
+    color:lightgray;
+    margin: 0 20vh 0 20vh;
+}
+button  {
+    background-color: white;
+    border:2px solid black;
+    align-self: center;
+    height: 6vh;
+    width: 15vh;
+}
+button:hover {
+    background-color: black;
+    color:white;
+}
+button:active {
+    background-color: white;
+    color:black;
+}
