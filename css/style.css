@@ -15,7 +15,7 @@ img.logo {
 }
 .title {
     margin: 0 0 3vh 0;
-    color: gray;
+    color: #171717;
     font-weight: 400;
     font-size: 5vh;
 }
@@ -28,7 +28,7 @@ img.logo {
     align-self: center;
 }
 hr {
-    color:lightgray;
+    color:#171717;
     margin: 0 20vh 0 20vh;
 }
 button  {
