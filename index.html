@@ -13,11 +13,23 @@
     <script src="./js/script.js" defer></script>
 </head>
 <body>
+    <div class="modal-container hide">
+        <div class="modal-content">
+            <img src="./img/modalLogo.png" class="modal-logo">
+            <h3 class="modal-title">Add new Book</h3>
+            <hr class="modal-bar">
+            <input type="text" class="input-title" placeholder="Book Title">
+            <input type="text" class="input-author" placeholder="Author's Name">
+            <input type="number" class="input-pages" placeholder="Number of Pages">
+            <p class="read-text">Have you read it? <span><input type="checkbox" id="isRead"></span></p>
+            <button class="modal-close">Submit</button>   
+        </div>
+    </div>
     <header class="top-main">
         <img class="logo" src="img/inBookerLogo.png">
         <h1 class="title">InBooker</h1>
         <p class="info">Minimalist Personal Library Collector</p>
-        <button>Add Book</button>
+        <button class="modal-open">Add Book</button>
     </header>
     <hr>
 </body>

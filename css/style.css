@@ -1,6 +1,73 @@
+body {
+    margin: 0;
+}
 * {
     box-sizing: border-box;
     font-family: Roboto;
+}
+
+/* Modal CSS */
+.modal-container {
+    width: 100%;
+    height:100vh;
+    background-color: rgba(189, 189, 189, 0.432);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 42px;
+}
+
+.modal-container.hide {
+    display:none;
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    width: 30%;
+    height: 85vh;
+    background-color: white;
+    border:4px solid gray;
+    box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+    margin: auto;
+    
+    
+}
+.modal-logo {
+    flex-shrink: 0;
+    width: 15vh;
+    height: 15vh;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 100%;
+}
+.modal-title {
+    font-size: 30px;
+}
+.modal-bar {
+    width: 100%;
+    border-color: lightgray;
+    border-width: 2px;
+    margin-bottom: 30px;
+}
+.input-title, .input-author, .input-pages {
+    border: 2px solid lightgrey;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 40px;
+    font-size: large;
+    flex-shrink: 0;
+}
+.read-text {
+    font-size: 20px;
+}
+#isRead {
+    width: 20px;
+    height: 20px;
 }
 .top-main {
     margin-top: 10vh;
