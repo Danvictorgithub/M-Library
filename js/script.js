@@ -1,16 +1,21 @@
-function Book(title, author,numPages,isRead) {
-
-  this.title = title;
+// Book Object Constructor
+function Book(name, author, pages, isRead="False") {
+  this.name = name;
   this.author = author;
-  this.numPages = numPages;
+  this.pages = pages;
   this.isRead = isRead;
-
 }
-Book.prototype.info = function () {
-  return `${this.title} by ${this.author}, ${this.numPages} pages, ${this.isRead}`;
-}
+Book.prototype.info = function() {
+  return(`${this.name} by ${this.author}, ${this.pages} pages, ${this.isRead}`);
+};
+let Shrek = new Book("shrek","the movie", "69", "is not read yet");
 
-// Selectors
+let myLibrary = [];
+
+function addBookToLibrary() {
+    
+}
+// Modal Functionality
 const modal = document.querySelector('.modal-container');
 const modalButtonOpen = document.querySelector('.modal-open').addEventListener('click', () => {
   modal.classList.remove('hide');
