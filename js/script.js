@@ -15,6 +15,11 @@ const inputRead = document.getElementById('isRead');
 
 const bookTable = document.querySelector('.book-list');
 
+let deleteButtons;
+
+
+
+
 // Book Object Constructor
 function Book(name, author, pages, isRead="off",index) {
   this.name = name;
@@ -41,11 +46,17 @@ function addBookToLibrary() {
     let bookAuthor = document.createElement('td');
     let bookPages = document.createElement('td');
     let bookisRead = document.createElement('td');
+    let bookDelete = document.createElement('td');
+    let bookButtonDelete = document.createElement('button');
     bookTitle.textContent = `${book.name}`;
     bookAuthor.textContent = `${book.author}`;
     bookPages.textContent = `${book.pages} pages`;
     bookisRead.textContent = `${(book.isRead) ? 'Read': 'Not Read'}`;
-    bookInfo = [bookTitle,bookAuthor,bookPages,bookisRead]
+    bookButtonDelete.setAttribute('id',`${book.index}`);
+    bookButtonDelete.setAttribute('class', 'delete');
+    bookButtonDelete.textContent = 'DELETE';
+    bookDelete.appendChild(bookButtonDelete);
+    bookInfo = [bookTitle,bookAuthor,bookPages,bookisRead,bookDelete];
     bookInfo.forEach((info) => {
        bookRow.appendChild(info);
     });
@@ -71,12 +82,21 @@ function isInputFilled() {
   }
 }
 function updateBookTable() {
-    while(bookTable.lastChild.childNodes.length != 0) {
-      bookTable.lastChild.removeChild(bookTable.lastChild.firstChild);
+    while(bookTable.lastChild.childNodes.length != 1) {
+      bookTable.lastChild.removeChild(bookTable.lastChild.lastChild);
     }
     addBookToLibrary();
+    deleteButtons = document.querySelectorAll('.delete');
+    deleteButtons.forEach((button) => {
+      button.addEventListener('click',deleteBook);
+    });
 }
 
+function deleteBook() {
+  let index = this.getAttribute('id');
+  myLibrary.splice(index,1);
+  updateBookTable();
+}
 const modalSubmit = document.querySelector('.modal-close');
 modalSubmit.addEventListener('click', SubmitBook)
 
