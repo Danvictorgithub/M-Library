@@ -19,8 +19,20 @@ let deleteButtons;
 
 
 
-
+class Book {
+  constructor(name, author, pages, isRead="off",index) {
+    this.name = name;
+    this.author = author;
+    this. pages = pages;
+    this.isRead = isRead;
+    this.index = index;
+  }
+  info() {
+    return(`${this.name} by ${this.author}, ${this.pages} pages, ${this.isRead}`);
+  }
+}
 // Book Object Constructor
+/*
 function Book(name, author, pages, isRead="off",index) {
   this.name = name;
   this.author = author;
@@ -31,7 +43,7 @@ function Book(name, author, pages, isRead="off",index) {
 Book.prototype.info = function() {
   return(`${this.name} by ${this.author}, ${this.pages} pages, ${this.isRead}`);
 };
-
+*/
 //Sample Book
 let Shrek = new Book("shrek","the movie", "69", true,0);
 
